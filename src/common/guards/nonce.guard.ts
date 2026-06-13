@@ -6,8 +6,8 @@ import {
   BadRequestException,
 } from "@nestjs/common";
 import { InjectRepository } from "@nestjs/typeorm";
+import { SubmissionNonce } from "src/blockchain/oracle/entities/submission-nonce.entity";
 import { Repository } from "typeorm";
-import { SubmissionNonce } from "../../oracle/entities/submission-nonce.entity";
 
 /**
  * Guard to prevent replay attacks by validating nonces

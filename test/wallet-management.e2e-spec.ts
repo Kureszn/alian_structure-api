@@ -3,7 +3,7 @@ import { INestApplication, ValidationPipe } from '@nestjs/common';
 import * as request from 'supertest';
 import { AppModule } from '../src/app.module';
 import { getRepositoryToken } from '@nestjs/typeorm';
-import { User, UserRole } from '../src/user/entities/user.entity';
+import { User, UserRole } from '../src/core/user/entities/user.entity';
 import { Repository } from 'typeorm';
 
 describe('Wallet Management (e2e)', () => {

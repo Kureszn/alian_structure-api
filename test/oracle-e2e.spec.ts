@@ -5,14 +5,14 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule } from '@nestjs/config';
 import { JwtModule } from '@nestjs/jwt';
 import { Wallet } from 'ethers';
-import { OracleModule } from '../src/oracle/oracle.module';
-import { AuthModule } from '../src/auth/auth.module';
-import { UserModule } from '../src/user/user.module';
-import { SignedPayload } from '../src/oracle/entities/signed-payload.entity';
-import { SubmissionNonce } from '../src/oracle/entities/submission-nonce.entity';
-import { User } from '../src/user/entities/user.entity';
-import { EmailVerification } from '../src/auth/entities/email-verification.entity';
-import { PayloadType } from '../src/oracle/entities/signed-payload.entity';
+import { OracleModule } from '../src/blockchain/oracle/oracle.module';
+import { AuthModule } from '../src/core/auth/auth.module';
+import { UserModule } from '../src/core/user/user.module';
+import { SignedPayload } from '../src/blockchain/oracle/entities/signed-payload.entity';
+import { SubmissionNonce } from '../src/blockchain/oracle/entities/submission-nonce.entity';
+import { User } from '../src/core/user/entities/user.entity';
+import { EmailVerification } from '../src/core/auth/entities/email-verification.entity';
+import { PayloadType } from '../src/blockchain/oracle/entities/signed-payload.entity';
 
 describe('Oracle E2E Tests', () => {
   let app: INestApplication;

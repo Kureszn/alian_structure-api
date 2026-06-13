@@ -1,8 +1,8 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { JwtService } from '@nestjs/jwt';
 import { UnauthorizedException } from '@nestjs/common';
-import { WalletAuthService } from '../src/auth/wallet-auth.service';
-import { ChallengeService } from '../src/auth/challenge.service';
+import { WalletAuthService } from '../src/core/auth/wallet-auth.service';
+import { ChallengeService } from '../src/core/auth/challenge.service';
 import { Wallet } from 'ethers';
 
 describe('Wallet Authentication', () => {

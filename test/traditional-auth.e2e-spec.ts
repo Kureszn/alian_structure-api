@@ -1,7 +1,7 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { INestApplication, ValidationPipe } from '@nestjs/common';
 import * as request from 'supertest';
-import { AuthModule } from '../src/auth/auth.module';
+import { AuthModule } from '../src/core/auth/auth.module';
 
 describe('Traditional Authentication (e2e)', () => {
   let app: INestApplication;

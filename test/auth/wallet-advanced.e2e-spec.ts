@@ -5,10 +5,10 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule } from '@nestjs/config';
 import { JwtService } from '@nestjs/jwt';
 import { Wallet } from 'ethers';
-import { AuthModule } from '../../src/auth/auth.module';
-import { User, UserRole } from '../../src/user/entities/user.entity';
-import { Wallet as WalletEntity, WalletStatus, WalletType } from '../../src/auth/entities/wallet.entity';
-import { EmailVerification } from '../../src/auth/entities/email-verification.entity';
+import { AuthModule } from '../../src/core/auth/auth.module';
+import { User, UserRole } from '../../src/core/user/entities/user.entity';
+import { Wallet as WalletEntity, WalletStatus, WalletType } from '../../src/core/auth/entities/wallet.entity';
+import { EmailVerification } from '../../src/core/auth/entities/email-verification.entity';
 
 describe('Advanced Wallet Authentication (e2e)', () => {
   let app: INestApplication;

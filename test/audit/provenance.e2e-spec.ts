@@ -4,14 +4,14 @@ import * as request from 'supertest';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule } from '@nestjs/config';
 import { JwtService } from '@nestjs/jwt';
-import { AuditModule } from '../../src/audit/audit.module';
-import { ProvenanceService } from '../../src/audit/provenance.service';
+import { AuditModule } from '../../src/infrastructure/audit/audit.module';
+import { ProvenanceService } from '../../src/infrastructure/audit/provenance.service';
 import {
   ProvenanceRecord,
   ProvenanceStatus,
   ProvenanceAction,
-} from '../../src/audit/entities/provenance-record.entity';
-import { User, UserRole } from '../../src/user/entities/user.entity';
+} from '../../src/infrastructure/audit/entities/provenance-record.entity';
+import { User, UserRole } from '../../src/core/user/entities/user.entity';
 
 describe('ProvenanceController (e2e)', () => {
   let app: INestApplication;

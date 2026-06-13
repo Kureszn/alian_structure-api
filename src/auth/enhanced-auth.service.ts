@@ -13,11 +13,12 @@ import * as bcrypt from "bcrypt";
 import { JwtService } from "@nestjs/jwt";
 import * as speakeasy from "speakeasy";
 import * as qrcode from "qrcode";
-import { User } from "../../user/entities/user.entity";
-import { RefreshToken, TwoFactorAuth, TwoFactorType, TwoFactorStatus } from "../entities/auth.entity";
-import { RegisterDto, LoginDto } from "../dto/auth.dto";
-import { RefreshTokenDto, TwoFactorSetupDto, TwoFactorVerifyDto } from "../dto/kyc.dto";
-import { EmailService } from "./email.service";
+import { User } from "../core/user/entities/user.entity";
+import { RefreshToken, TwoFactorAuth, TwoFactorStatus, TwoFactorType } from "../core/auth/entities/auth.entity";
+import { EmailService } from "../core/auth/email.service";
+import { LoginDto, RefreshTokenDto, RegisterDto, TwoFactorVerifyDto } from "../core/auth/dto/auth.dto";
+import { TwoFactorSetupDto } from "../core/auth/dto/kyc.dto";
+
 
 @Injectable()
 export class EnhancedAuthService {
@@ -398,5 +399,4 @@ export class EnhancedAuthService {
   async validateUser(userId: string): Promise<User | null> {
     return this.userRepository.findOne({ where: { id: userId } });
   }
-}</content>
-<parameter name="filePath">/workspaces/stellAIverse-backend/src/auth/enhanced-auth.service.ts
+}

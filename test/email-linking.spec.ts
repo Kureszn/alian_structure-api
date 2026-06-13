@@ -2,10 +2,10 @@ import { Test, TestingModule } from '@nestjs/testing';
 import { getRepositoryToken } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { BadRequestException, ConflictException, NotFoundException, UnauthorizedException } from '@nestjs/common';
-import { EmailLinkingService } from '../src/auth/email-linking.service';
-import { EmailService } from '../src/auth/email.service';
-import { User } from '../src/user/entities/user.entity';
-import { EmailVerification } from '../src/auth/entities/email-verification.entity';
+import { EmailLinkingService } from '../src/core/auth/email-linking.service';
+import { EmailService } from '../src/core/auth/email.service';
+import { User } from '../src/core/user/entities/user.entity';
+import { EmailVerification } from '../src/core/auth/entities/email-verification.entity';
 
 describe('EmailLinkingService', () => {
   let service: EmailLinkingService;

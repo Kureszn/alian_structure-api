@@ -7,8 +7,8 @@ import {
   ApiSecurity,
 } from "@nestjs/swagger";
 import { AppService } from "./app.service";
-import { JwtAuthGuard } from "./auth/jwt.guard";
 import { RateLimit } from "./common/decorators/rate-limit.decorator";
+import { JwtAuthGuard } from "./core/auth/jwt.guard";
 
 @ApiTags("Health")
 @Controller()

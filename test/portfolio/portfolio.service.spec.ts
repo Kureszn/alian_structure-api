@@ -1,12 +1,12 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { getRepositoryToken } from '@nestjs/typeorm';
-import { PortfolioService } from '../../src/portfolio/services/portfolio.service';
-import { Portfolio } from '../../src/portfolio/entities/portfolio.entity';
-import { PortfolioAsset } from '../../src/portfolio/entities/portfolio-asset.entity';
-import { OptimizationHistory } from '../../src/portfolio/entities/optimization-history.entity';
-import { RiskProfile } from '../../src/portfolio/entities/risk-profile.entity';
-import { CreatePortfolioDto } from '../../src/portfolio/dto/portfolio.dto';
-import { OptimizationMethod } from '../../src/portfolio/entities/optimization-history.entity';
+import { PortfolioService } from '../../src/investment/portfolio/services/portfolio.service';
+import { Portfolio } from '../../src/investment/portfolio/entities/portfolio.entity';
+import { PortfolioAsset } from '../../src/investment/portfolio/entities/portfolio-asset.entity';
+import { OptimizationHistory } from '../../src/investment/portfolio/entities/optimization-history.entity';
+import { RiskProfile } from '../../src/investment/portfolio/entities/risk-profile.entity';
+import { CreatePortfolioDto } from '../../src/investment/portfolio/dto/portfolio.dto';
+import { OptimizationMethod } from '../../src/investment/portfolio/entities/optimization-history.entity';
 
 describe('PortfolioService', () => {
   let service: PortfolioService;

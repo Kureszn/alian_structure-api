@@ -1,10 +1,10 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { NotFoundException } from '@nestjs/common';
-import { RecoveryService } from '../src/auth/recovery.service';
-import { EmailLinkingService } from '../src/auth/email-linking.service';
-import { EmailService } from '../src/auth/email.service';
-import { ChallengeService } from '../src/auth/challenge.service';
-import { User } from '../src/user/entities/user.entity';
+import { RecoveryService } from '../src/core/auth/recovery.service';
+import { EmailLinkingService } from '../src/core/auth/email-linking.service';
+import { EmailService } from '../src/core/auth/email.service';
+import { ChallengeService } from '../src/core/auth/challenge.service';
+import { User } from '../src/core/user/entities/user.entity';
 
 describe('RecoveryService', () => {
   let service: RecoveryService;
